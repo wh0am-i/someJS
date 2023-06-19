@@ -1,10 +1,14 @@
 /*1. Crie uma função que recebe 2 números como argumento e retorne se o primeiro é
 maior ou igual ao segundo.*/
-function atv1(num1, num2) return num1 > num2
+function atv1(num1, num2) {
+    return num1 > num2
+}
 /*2. Crie uma função que receba a idade da pessoa e retorne a quantidade de dias, crie
 uma validação para não permitir número negativo, e quando tiver retorna uma
 mensagem de erro.*/
-function atv2(idade) return (idade - 1) >= 0 ? idade * 365 : "Erro!"
+function atv2(idade) {
+    return (idade - 1) >= 0 ? idade * 365 : "Erro!"
+}
 /*3. Crie uma função que receba número de 1 a 12 e retorne o mês correspondente,
 exemplo se colocar o número 2, o retorno deve ser “Fevereiro”.*/
 function atv3(mes) {
@@ -19,7 +23,9 @@ não for de nenhum dos tipos, retorna “Booelano ou Número esperados, mas o
 parâmetro é do tipo (tipo do parâmetro).*/
 function atv4(input) {
     if (typeof input === "boolean") return !input
-    else if (typeof input === "number") return input * (-1)
+    else if (typeof input === "number") {
+        return input * (-1)
+    }
     else return "Booelano ou Número esperados, mas o parâmetro é do tipo " + typeof input
 }
 /*5. Escreva uma função que recebe dois números inteiros não negativos e realize a
@@ -63,12 +69,14 @@ function atv7(array) {
 números desse array.*/
 function atv8(array) {
     var output = 0
-    array.forEach(element => { output += element });
+    array.forEach(element => { output += element })
     return output
 }
 /*9. Crie uma função que recebe um array de números e retorna o segundo maior
 número presente nesse array.*/
-function atv9(array) return Math.max(...array)
+function atv9(array) {
+return Math.max(...(array.filter(num => num != (Math.max(...array)))))
+}
 /*10. Crie uma função que recebe um objeto com os estudantes e suas notas. as notas de
 cada estudante estarão num array. Calcule a média da nota de cada aluno e retorne
 um objeto com os atributos nome e média, que indica o aluno que tem o melhor
@@ -101,12 +109,12 @@ function atv10(obj) {
 console.log(atv1(1, 2))
 console.log(atv2(1))
 console.log(atv3(2))
-console.log(atv4(false))
+console.log(atv4("aaa"))
 console.log(atv5(4, 2))
 console.log(atv6("Teste", 3))
 console.log(atv7(['Js', 2, 'hoje', 4, 5, 7, 'teste']))
 console.log(atv8([1, 2, 3, 4]))
-console.log(atv9([3, 4, 11, 6, 1, 10, 2]))
+console.log(atv9([3, 4, 12, 6, 1, 14, 2]))
 console.log(atv10({
     Augusto: [8, 7.6, 8.9, 6], // media 7.625
     Mariana: [9, 6.6, 7.9, 8], // media 7.875
