@@ -1,14 +1,10 @@
 /*1. Crie uma função que recebe 2 números como argumento e retorne se o primeiro é
 maior ou igual ao segundo.*/
-function atv1(num1, num2) {
-    return num1 > num2
-}
+function atv1(num1, num2) return num1 > num2
 /*2. Crie uma função que receba a idade da pessoa e retorne a quantidade de dias, crie
 uma validação para não permitir número negativo, e quando tiver retorna uma
 mensagem de erro.*/
-function atv2(idade) {
-    return (idade - 1) >= 0 ? idade * 365 : "Erro!"
-}
+function atv2(idade) return (idade - 1) >= 0 ? idade * 365 : "Erro!"
 /*3. Crie uma função que receba número de 1 a 12 e retorne o mês correspondente,
 exemplo se colocar o número 2, o retorno deve ser “Fevereiro”.*/
 function atv3(mes) {
@@ -22,12 +18,9 @@ inverso. Exemplo: se fornecer 1, o retorno deve ser -1. Se o parâmetro de entra
 não for de nenhum dos tipos, retorna “Booelano ou Número esperados, mas o
 parâmetro é do tipo (tipo do parâmetro).*/
 function atv4(input) {
-    if (typeof input === "boolean") {
-        return input == false ? true : false
-    }
-    else if (typeof input === "number") {
-        return input * (-1)
-    }
+    if (typeof input === "boolean") return !input
+    else if (typeof input === "number") return input * (-1)
+    else return "Booelano ou Número esperados, mas o parâmetro é do tipo " + typeof input
 }
 /*5. Escreva uma função que recebe dois números inteiros não negativos e realize a
 multiplicação deles. Porém não pode utilizar o operador de multiplicação.*/
@@ -75,9 +68,7 @@ function atv8(array) {
 }
 /*9. Crie uma função que recebe um array de números e retorna o segundo maior
 número presente nesse array.*/
-function atv9(array) {
-    return Math.max(...array)
-}
+function atv9(array) return Math.max(...array)
 /*10. Crie uma função que recebe um objeto com os estudantes e suas notas. as notas de
 cada estudante estarão num array. Calcule a média da nota de cada aluno e retorne
 um objeto com os atributos nome e média, que indica o aluno que tem o melhor
